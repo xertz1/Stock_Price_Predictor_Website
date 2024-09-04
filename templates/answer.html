@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stock Predictor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Stock Predictor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{{ url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#anchor_point">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class = "container">
+        <div class = "wrapper" style = "margin: 70px auto; border-radius: 10px; padding-top: 50px; padding-bottom: 50px; box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0) ; background-color: #7f7f7f">
+        <div class = "row" style="justify-content: center;">
+            <div class = "col-md-6" style="text-align: center;">
+                <div class = "feature-box" style = "padding: 30px;">
+                    <h1 style = "margin-top: 50px; margin-bottom: 30px; color: white; font-size: 50px;"> {{ result }} </h1>
+                    <img src = "data:image/png;base64, {{ plot_url }}" alt = "Stock Graph" style = "width: 100%; height: 100%;" >
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <footer class = "footer-area section-padding" style = "background-color: #343a40 ;">
+            <div class = "about">
+                <div class="row" style = 'justify-content: center;'>
+                    <div class = "col-md-8 col-lg-8" style = "text-align: center; color: white; font-size: medium;">
+                            <h3><br><br>About this Website</h3>
+                            <hr style="background-color: white;">
+                            <p id = "anchor_point">This project focuses on predicting stock prices using a Long Short-Term Memory (LSTM) neural network, a powerful deep learning model particularly well-suited for time series forecasting. <br><br> By leveraging historical stock data, the model is trained to predict future closing prices. The data is carefully preprocessed, including scaling and using a sliding window approach, to ensure the model learns effectively from past trends. After training, the model generates future stock price predictions, which are visualized alongside historical data. <br><br>
+                                The outcome helps users make informed decisions about potential stock investments. This project not only demonstrates the application of LSTM models in financial forecasting but also highlights the importance of proper data preparation and model tuning in achieving accurate predictions.</p>
+                            <hr style="background-color: white;">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <footer id = "info" class = "section-padding" style = "background-color: #252525;">
+            <div class = "row" style="justify-content: center;">
+                <div class = col-lg-8 style = "text-align: center; color: white;">
+                    <p><br>2024 | Kishore</p>
+                </div>
+            </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
